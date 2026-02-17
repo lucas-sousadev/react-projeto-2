@@ -25,6 +25,7 @@ export const style = StyleSheet.create({
 		height: Dimensions.get("window").height / 3,
 		width: "100%",
 		alignItems: "center",
+		justifyContent: "center",
 	},
 	logo: {
 		width: 160,
@@ -35,27 +36,6 @@ export const style = StyleSheet.create({
 		fontWeight: "bold",
 		marginTop: 40,
 		fontSize: 18,
-	},
-	button: {
-		width: 200,
-		height: 50,
-		backgroundColor: "#da4d43",
-		borderRadius: 40,
-		justifyContent: "center",
-		alignItems: "center",
-		shadowColor: "#111111",
-		shadowOffset: {
-			width: 0,
-			height: 3,
-		},
-		shadowOpacity: 0.3,
-		shadowRadius: 4.65,
-		elevation: 7,
-	},
-	textButton: {
-		fontSize: 20,
-		color: "#fff",
-		fontWeight: "heavy",
 	},
 	textBottom: {
 		fontSize: 16,

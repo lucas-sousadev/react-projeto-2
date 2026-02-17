@@ -1,0 +1,8 @@
+Um testador de software, ou Analista de QA (Quality Assurance), garante a qualidade de sistemas, sites e aplicativos, identificando falhas e bugs antes do seu lançamento. Eles planejam, criam e executam testes manuais ou automatizados, documentam erros e garantem que o produto atenda aos requisitos do usuário. Tendo como objetivo principal, assegurar que o software seja confiável, estável e atenda às expectativas, evitando custos de correção após o lançamento.  
+Principais Atividades:
+Análise de requisitos: Revisar documentação para prever problemas cedo.
+Planejamento e Execução: Criar casos de teste, preparar dados e testar funcionalidades.
+Relatório de Bugs: Registrar defeitos encontrados e colaborar com desenvolvedores para corrigi-los.
+Automação: Desenvolver scripts para realizar testes repetitivos de forma automática.
+Testes Variados: Executar testes de usabilidade (experiência do usuário), segurança, performance e carga. 
+O objetivo principal é assegurar que o software seja confiável, estável e atenda às expectativas, evitando custos de correção após o lançamento. 

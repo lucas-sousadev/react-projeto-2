@@ -31,7 +31,7 @@ export const style = StyleSheet.create({
 	},
     Icon:{
         width: "100%",
-        left: 45,
+        left: 35,
     },
     Button: {
         width: "10%",

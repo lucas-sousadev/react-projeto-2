@@ -3,8 +3,14 @@ import React, { useState } from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import Logo from "../../assets/testelogo.png";
 import { Input } from "../../components/input";
+import { Button } from "../../components/button";
 import { style } from "./style";
+import { useNavigation, NavigationProp } from "@react-navigation/native";
+
+
 export function Login() {
+	const navigation = useNavigation<NavigationProp<any>>();
+
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [showPassword, setShowPassword] = useState(false);
@@ -15,13 +21,15 @@ export function Login() {
 				alert("Por favor, preencha todos os campos.");
 				return;
 			}
-			setTimeout(() => {
+
+			navigation.reset({routes: [{name: "BottomRoutes"}]})
+
 				if (email == "castanhajabuticaba@gmail.com" && password == "senha") {
 					alert("Logado com sucesso!");
 				} else {
 					alert("Usuário não encontrado!");
 				}
-			}, 1000);
+			
 		} catch (error) {
 			console.error("Erro ao fazer login:", error);
 		}
@@ -54,9 +62,10 @@ export function Login() {
 				/>
 			</View>
 			<View style={style.boxBottom}>
-				<TouchableOpacity style={style.button} onPress={() => getLogin()}>
-					<Text style={style.textButton}>Entrar</Text>
-				</TouchableOpacity>
+				<Button 
+					text="Entrar"
+				 	onPress={() => getLogin()} 
+				/>
 			</View>
 			<Text style={style.textBottom}>
 				Não tem conta?{" "}

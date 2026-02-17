@@ -1,14 +1,15 @@
-import { StyleSheet, View } from "react-native";
-import { Login } from "./login/login";
+import { StyleSheet } from "react-native";
+
+import Routes from "../routes/index.routes";
 
 export default function Index() {
-	return <Login />;
+	return ( 
+		<Routes />
+	);
 }
 
 export const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		justifyContent: "center",
-		alignItems: "center",
 	},
 }); 
