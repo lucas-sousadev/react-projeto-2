@@ -5,7 +5,7 @@ import {
 	TextInput,
 	TextInputProps,
 	TouchableOpacity,
-	View,
+	View, StyleProp, TextStyle
 } from "react-native";
 import { style } from "./style";
 
@@ -22,6 +22,8 @@ type Props = TextInputProps & {
 	title?: string;
 	onIconLeftPress?: () => void;
 	onIconRightPress?: () => void;
+	height?: number;
+	labelStyle?:StyleProp<TextStyle>;
 };
 export const Input = forwardRef((Props: Props, ref: Ref<TextInput>) => {
 	const {
@@ -32,6 +34,8 @@ export const Input = forwardRef((Props: Props, ref: Ref<TextInput>) => {
 		title,
 		onIconLeftPress,
 		onIconRightPress,
+		height,
+		labelStyle,
 		...rest
 	} = Props;
 
@@ -55,8 +59,8 @@ export const Input = forwardRef((Props: Props, ref: Ref<TextInput>) => {
 	};
 	return (
 		<Fragment>
-			<Text style={style.titleInput}>{title}</Text>
-			<View style={[style.boxInput, {paddingLeft: calculateSizePaddingLeft()}]}>
+			<Text style={[style.titleInput, labelStyle]}>{title}</Text>
+			<View style={[style.boxInput, {paddingLeft: calculateSizePaddingLeft(), height: height || 40}]}>
 				{IconLeft && iconLeftName && (
 					<TouchableOpacity onPress={onIconLeftPress} style={style.Button}>
 						<IconLeft
@@ -67,7 +71,7 @@ export const Input = forwardRef((Props: Props, ref: Ref<TextInput>) => {
 						/>
 					</TouchableOpacity>
 				)}
-				<TextInput style={[style.input, {width:calculateSizeWidth() as any}]} {...rest}  />
+				<TextInput style={[style.input, {width:calculateSizeWidth(), height: "100%"}]} {...rest} underlineColorAndroid="transparent" />
 				{IconRight && iconRightName && (
 					<TouchableOpacity onPress={onIconRightPress} style={style.Button}>
 						<IconRight

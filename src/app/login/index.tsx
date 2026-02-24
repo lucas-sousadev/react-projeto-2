@@ -21,15 +21,10 @@ export function Login() {
 				alert("Por favor, preencha todos os campos.");
 				return;
 			}
-
-			navigation.reset({routes: [{name: "BottomRoutes"}]})
-
-				if (email == "castanhajabuticaba@gmail.com" && password == "senha") {
-					alert("Logado com sucesso!");
-				} else {
-					alert("Usuário não encontrado!");
+				if (email == "a" && password == "a") {
+					return navigation.reset({routes: [{name: "BottomRoutes"}]})
 				}
-			
+				alert("Usuário não encontrado!");	
 		} catch (error) {
 			console.error("Erro ao fazer login:", error);
 		}

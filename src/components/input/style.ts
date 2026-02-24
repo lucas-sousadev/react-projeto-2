@@ -15,7 +15,7 @@ export const style = StyleSheet.create({
 	},
 	input: {
 		height: "100%",
-		width: "90%",
+		width: "80%",
 		padding: 10,
 		borderRadius: 40,
 	},
@@ -31,7 +31,7 @@ export const style = StyleSheet.create({
 	},
     Icon:{
         width: "100%",
-        left: 35,
+        left: 0,
     },
     Button: {
         width: "10%",

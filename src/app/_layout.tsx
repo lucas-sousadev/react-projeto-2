@@ -10,11 +10,11 @@ export const unstable_settings = {
 
 export default function RootLayout() {
   return (
-    <ThemeProvider value={DarkTheme}>
-      <StatusBar style="light" />
-      <Stack>
-        <Stack.Screen name="index" options={{ headerShown: false }} />
-      </Stack>
-    </ThemeProvider>
+      <ThemeProvider value={DarkTheme}>
+        <StatusBar style="light" />
+        <Stack>
+          <Stack.Screen name="index" options={{ headerShown: false }} />
+        </Stack>
+      </ThemeProvider>
   );
 }
